@@ -44,7 +44,7 @@ app.post("/webhooks",async (req, res) => {
       const from = messageData.from;
       const msg_body = messageData.text?.body || "";
 
-      console.log(`✅ Message from ${from}: "${msg_body}"`);
+      console.log(`Message from ${from}: "${msg_body}"`);
 
       try {
        const result= await axios({
@@ -58,7 +58,7 @@ app.post("/webhooks",async (req, res) => {
           data: {
             messaging_product: "whatsapp",
             to: from,
-            text: { body: "Hi 👋 I'm Suvamoy, nice to meet you!" }
+            text: { body: "Hi  I'm Suvamoy, nice to meet you!" }
           },
           
         });
